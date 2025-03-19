@@ -4,6 +4,37 @@ import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
+  // Text animation variants
+  const nameAnimation = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  const letterAnimation = {
+    hidden: { 
+      opacity: 0, 
+      y: 20,
+      scale: 0.8 
+    },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+  };
+
+  const fullName = "Dev Karan Singh";
+  
   return (
     <section className="min-h-screen flex items-center justify-center relative px-6 md:px-12 py-20">
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-blue-950/30 dark:via-purple-950/30 dark:to-pink-950/30"></div>
@@ -22,11 +53,27 @@ export function Hero() {
         
         <motion.h1 
           className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
         >
-          Hi, I'm <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Dev Karan Singh</span>
+          Hi, I'm{" "}
+          <motion.span
+            className="inline-block"
+            variants={nameAnimation}
+            initial="hidden"
+            animate="visible"
+          >
+            {fullName.split("").map((letter, index) => (
+              <motion.span
+                key={index}
+                className={letter === " " ? "inline-block mr-2" : "inline-block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"}
+                variants={letterAnimation}
+              >
+                {letter}
+              </motion.span>
+            ))}
+          </motion.span>
         </motion.h1>
         
         <motion.p 

@@ -61,7 +61,7 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    title: "Assingment UI Dashboard",
+    title: "Assignment UI Dashboard",
     description: "An interactive dashboard showcasing data visualization and analytics for a fictional company.",
     image: "/ui_image.png",
     tags: ["Flutter", "Dart", "Libraries - chart_flutter", "Figma"],

@@ -35,8 +35,8 @@ const skillCategories: SkillCategory[] = [
     color: "from-purple-500 to-indigo-500",
     skills: [
       { name: "Node.js", level: 40, category: 'backend' },
-      { name: "PostgreSQL", level: 70, category: 'backend' },
-      { name: "GraphQL", level: 65, category: 'backend' },
+      { name: "SQLite", level: 70, category: 'backend' },
+      
       { name: "REST APIs", level: 50, category: 'backend' },
     ],
   },

@@ -16,7 +16,7 @@ export function Hero() {
           transition={{ duration: 0.8 }}
         >
           <span className="inline-block font-medium text-sm md:text-base text-muted-foreground tracking-wider uppercase mb-3 px-4 py-1 rounded-full border border-border backdrop-blur-sm bg-gradient-to-r from-blue-100/50 to-purple-100/50 dark:from-blue-900/20 dark:to-purple-900/20">
-            Software Developer & Designer
+            Application Developer & Designer
           </span>
         </motion.div>
         
@@ -35,7 +35,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          I craft beautiful, functional websites and applications with a focus on user experience and clean code.
+          I craft beautiful, functional and minimalistic cross-platform mobile applications with a focus on user experience and clean code.
         </motion.p>
         
         <motion.div

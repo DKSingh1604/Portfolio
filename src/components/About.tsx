@@ -19,16 +19,16 @@ type EducationItem = {
 
 const experienceData: ExperienceItem[] = [
   {
-    title: "Senior Frontend Developer",
-    company: "Tech Innovations Inc",
-    period: "2021 - Present",
+    title: "Flutter Developer",
+    company: "WhiterApps",
+    period: " March 2025 - Present",
     description: "Led development of modern web applications using React, TypeScript and Next.js. Implemented design systems and optimized application performance."
   },
   {
-    title: "UI/UX Developer",
-    company: "Creative Solutions",
-    period: "2018 - 2021",
-    description: "Designed and developed user interfaces for multiple clients. Collaborated with design and backend teams to create cohesive product experiences."
+    title: "Web/App Developer",
+    company: "Team 1.618",
+    period: " Oct 2023 - Feb 2025",
+    description: "Led development and research of Car Instrumentation and Clusterization app, improving UI/UX and optimizing performance."
   },
 ];
 
@@ -75,7 +75,8 @@ export function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div>
             <motion.img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
+              
+              src="/Me.jpg"
               alt="Dev Karan Singh"
               className="w-full h-auto rounded-2xl shadow-lg object-cover mb-8"
               initial={{ opacity: 0, scale: 0.9 }}

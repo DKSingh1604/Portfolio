@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -32,22 +33,15 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
+    --radius: 0.85rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -95,7 +89,56 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   body {
     @apply bg-background text-foreground;
+  }
+  
+  ::selection {
+    @apply bg-primary/20;
+  }
+}
+
+@layer components {
+  /* Glass card effect */
+  .glass-card {
+    @apply backdrop-blur-md bg-white/10 border border-white/20 shadow-lg;
+  }
+  
+  /* Project card hover effect */
+  .project-card {
+    @apply transition-all duration-300 hover:translate-y-[-8px] hover:shadow-xl;
+  }
+  
+  /* Progress bar animation */
+  .progress-bar {
+    @apply relative overflow-hidden rounded-full bg-secondary;
+  }
+  
+  /* Navigation link style */
+  .nav-link {
+    @apply relative cursor-pointer px-1;
+  }
+  
+  .nav-link::after {
+    @apply content-[''] absolute left-0 bottom-[-2px] w-0 h-[2px] bg-primary transition-all duration-300 ease-in-out;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  /* Section transitions */
+  .section-animate {
+    @apply opacity-0;
+  }
+  
+  .section-animate.animate-in {
+    @apply animate-fade-in;
   }
 }

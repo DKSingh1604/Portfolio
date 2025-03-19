@@ -41,7 +41,7 @@ export function Header() {
     )}>
       <div className="container mx-auto flex justify-between items-center">
         <a href="#" className="text-xl font-medium">
-          Dev<span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-semibold">KS</span>
+          <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-semibold">DK</span>
         </a>
         
         {/* Desktop Navigation */}

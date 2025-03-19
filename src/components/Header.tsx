@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { ThemeToggle } from './ThemeToggle';
 
 const NavItem = ({ href, label, isMobile, onClick }: { href: string; label: string; isMobile?: boolean; onClick?: () => void }) => (
   <li>
@@ -45,28 +46,32 @@ export function Header() {
         </a>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:block">
-          <ul className="flex space-x-8">
+        <nav className="hidden md:flex md:items-center">
+          <ul className="flex space-x-8 mr-4">
             <NavItem href="#about" label="About" />
             <NavItem href="#projects" label="Projects" />
             <NavItem href="#skills" label="Skills" />
             <NavItem href="#contact" label="Contact" />
           </ul>
+          <ThemeToggle />
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-foreground p-1 rounded-md hover:text-purple-600 transition-colors"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Menu Button and Theme Toggle */}
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
+          <button 
+            className="text-foreground p-1 rounded-md hover:text-purple-600 transition-colors"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
       <div className={cn(
-        "fixed inset-0 bg-white/95 dark:bg-background/95 backdrop-blur-md z-40 transition-all duration-300 md:hidden",
+        "fixed inset-0 bg-background/95 backdrop-blur-md z-40 transition-all duration-300 md:hidden",
         mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
       )}>
         <div className="h-full flex flex-col justify-center items-center">

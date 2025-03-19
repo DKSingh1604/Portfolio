@@ -8,9 +8,6 @@ import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { useEffect } from "react";
 
-// Add framer-motion
-<lov-add-dependency>framer-motion@latest</lov-add-dependency>
-
 const Index = () => {
   useEffect(() => {
     // Intersection Observer to add animations on scroll

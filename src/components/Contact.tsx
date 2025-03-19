@@ -53,19 +53,19 @@ export function Contact() {
     {
       icon: <Mail className="h-5 w-5 text-primary" />,
       label: "Email",
-      value: "contact@devkaransingh.com",
-      link: "mailto:contact@devkaransingh.com",
+      value: "dev1604karan@gmail.com",
+      link: "mailto:dev1604karan@gmail.com",
     },
     {
       icon: <Phone className="h-5 w-5 text-primary" />,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "+91 88680 19315",
+      link: "tel:+918868019315",
     },
     {
       icon: <MapPin className="h-5 w-5 text-primary" />,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Chennai, Tamil Nadu, India",
       link: null,
     },
   ];
@@ -74,18 +74,19 @@ export function Contact() {
     {
       icon: <Github className="h-5 w-5" />,
       label: "GitHub",
-      link: "https://github.com",
+      link: "https://github.com/DKSingh1604/",
     },
     {
       icon: <Linkedin className="h-5 w-5" />,
       label: "LinkedIn",
-      link: "https://linkedin.com",
+      link: "https://www.linkedin.com/in/dev-karan-singh/",
     },
     {
       icon: <Twitter className="h-5 w-5" />,
       label: "Twitter",
-      link: "https://twitter.com",
+      link: "https://x.com/Dee_Kay_Singh",
     },
+
   ];
 
   return (

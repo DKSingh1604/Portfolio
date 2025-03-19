@@ -22,9 +22,8 @@ const skillCategories: SkillCategory[] = [
     icon: "💻",
     color: "from-blue-500 to-cyan-400",
     skills: [
-      { name: "React", level: 90, category: 'frontend' },
-      { name: "TypeScript", level: 85, category: 'frontend' },
-      { name: "Next.js", level: 80, category: 'frontend' },
+      { name: "Flutter", level: 90, category: 'frontend' },
+      { name: "Dart", level: 85, category: 'frontend' },
       { name: "TailwindCSS", level: 95, category: 'frontend' },
       { name: "HTML/CSS", level: 95, category: 'frontend' },
       { name: "JavaScript", level: 90, category: 'frontend' },
@@ -35,12 +34,10 @@ const skillCategories: SkillCategory[] = [
     icon: "🔧",
     color: "from-purple-500 to-indigo-500",
     skills: [
-      { name: "Node.js", level: 85, category: 'backend' },
-      { name: "Express", level: 80, category: 'backend' },
-      { name: "MongoDB", level: 75, category: 'backend' },
+      { name: "Node.js", level: 40, category: 'backend' },
       { name: "PostgreSQL", level: 70, category: 'backend' },
       { name: "GraphQL", level: 65, category: 'backend' },
-      { name: "REST APIs", level: 85, category: 'backend' },
+      { name: "REST APIs", level: 50, category: 'backend' },
     ],
   },
   {
@@ -50,7 +47,6 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "UI/UX Design", level: 85, category: 'design' },
       { name: "Figma", level: 90, category: 'design' },
-      { name: "Adobe XD", level: 75, category: 'design' },
       { name: "Design Systems", level: 80, category: 'design' },
       { name: "Responsive Design", level: 95, category: 'design' },
       { name: "Prototyping", level: 85, category: 'design' },
@@ -61,12 +57,12 @@ const skillCategories: SkillCategory[] = [
     icon: "🛠️",
     color: "from-amber-500 to-orange-400",
     skills: [
-      { name: "Git", level: 90, category: 'tools' },
+      { name: "Git/Github", level: 90, category: 'tools' },
       { name: "Docker", level: 70, category: 'tools' },
-      { name: "Testing", level: 75, category: 'tools' },
-      { name: "CI/CD", level: 65, category: 'tools' },
-      { name: "Agile/Scrum", level: 80, category: 'tools' },
-      { name: "Performance Optimization", level: 75, category: 'tools' },
+      { name: "Firebase/Supabase", level: 75, category: 'tools' },
+      { name: "CI/CD", level: 50, category: 'tools' },
+      { name: "BLoC", level: 80, category: 'tools' },
+      { name: "Postman", level: 70, category: 'tools' },
     ],
   },
 ];

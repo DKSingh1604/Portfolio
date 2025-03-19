@@ -34,16 +34,16 @@ const experienceData: ExperienceItem[] = [
 
 const educationData: EducationItem[] = [
   {
-    degree: "MSc in Computer Science",
-    institution: "University of Technology",
-    period: "2016 - 2018",
-    description: "Specialized in human-computer interaction and advanced software development methodologies."
+    degree: "B.Tech. in Computer Science",
+    institution: "SRM Institute of Science and Technology (8.4 CGPA)",
+    period: "2022- 2026",
+    description: "Specialised in Software Developent and core Computer Application skills."
   },
   {
-    degree: "BSc in Software Engineering",
-    institution: "National University",
-    period: "2012 - 2016",
-    description: "Graduated with honors. Focused on full-stack development, algorithms, and software architecture."
+    degree: "12th",
+    institution: "R.A.N Public School (90%)",
+    period: "2021 - 2022",
+    description: "Specialized in human-computer interaction and advanced software development methodologies."
   },
 ];
 
@@ -92,11 +92,11 @@ export function About() {
             >
               <h3 className="text-2xl font-semibold mb-4">Who I Am</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                I'm a passionate software developer and designer with over 5 years of experience creating exceptional digital experiences. I specialize in building modern, responsive web applications with a focus on user experience and clean code.
+              Yo! I'm an app developer turning caffeine and code into sleek, high-performance mobile apps. With 2+ years in Flutter, Firebase, and Supabase, I craft smooth UIs and clean code. Always leveling up—Kotlin, Node.js, you name it. Goal? Build cool stuff and break barriers!
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              {/* <p className="text-muted-foreground leading-relaxed">
                 My approach combines technical expertise with creative problem-solving to deliver solutions that are not only functional but also aesthetically pleasing and intuitive to use. I'm constantly learning and exploring new technologies to stay at the forefront of web development.
-              </p>
+              </p> */}
             </motion.div>
           </div>
           

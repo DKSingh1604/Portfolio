@@ -10,7 +10,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#" className="text-xl font-medium">
-              Dev<span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-semibold">KS</span>
+              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-semibold">DK</span>
             </a>
             <p className="text-muted-foreground text-sm mt-2">
               Creating digital experiences with precision and passion.
@@ -19,7 +19,7 @@ export function Footer() {
           
           <div className="flex space-x-6">
             <a
-              href="https://github.com"
+              href="https://github.com/DKSingh1604/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-purple-600 transition-colors"
@@ -28,7 +28,7 @@ export function Footer() {
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/dev-karan-singh/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-blue-600 transition-colors"
@@ -37,7 +37,7 @@ export function Footer() {
               <Linkedin size={20} />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/Dee_Kay_Singh"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-sky-500 transition-colors"

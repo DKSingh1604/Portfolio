@@ -41,7 +41,7 @@ export function Header() {
     )}>
       <div className="container mx-auto flex justify-between items-center">
         <a href="#" className="text-xl font-medium">
-          Dev<span className="text-primary font-semibold">KS</span>
+          Dev<span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-semibold">KS</span>
         </a>
         
         {/* Desktop Navigation */}
@@ -56,7 +56,7 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-foreground p-1 rounded-md"
+          className="md:hidden text-foreground p-1 rounded-md hover:text-purple-600 transition-colors"
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
         >
@@ -66,7 +66,7 @@ export function Header() {
 
       {/* Mobile Navigation */}
       <div className={cn(
-        "fixed inset-0 bg-background/95 backdrop-blur-md z-40 transition-all duration-300 md:hidden",
+        "fixed inset-0 bg-white/95 dark:bg-background/95 backdrop-blur-md z-40 transition-all duration-300 md:hidden",
         mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
       )}>
         <div className="h-full flex flex-col justify-center items-center">

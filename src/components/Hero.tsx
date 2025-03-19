@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 export function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center relative px-6 md:px-12 py-20">
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-blue-950/30 dark:via-purple-950/30 dark:to-pink-950/30"></div>
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0.02)_0,_rgba(0,0,0,0)_100%)]"></div>
       
       <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -14,7 +15,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block font-medium text-sm md:text-base text-muted-foreground tracking-wider uppercase mb-3 px-4 py-1 rounded-full border border-border backdrop-blur-sm">
+          <span className="inline-block font-medium text-sm md:text-base text-muted-foreground tracking-wider uppercase mb-3 px-4 py-1 rounded-full border border-border backdrop-blur-sm bg-gradient-to-r from-blue-100/50 to-purple-100/50 dark:from-blue-900/20 dark:to-purple-900/20">
             Software Developer & Designer
           </span>
         </motion.div>
@@ -25,7 +26,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Hi, I'm <span className="text-primary">Dev Karan Singh</span>
+          Hi, I'm <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Dev Karan Singh</span>
         </motion.h1>
         
         <motion.p 
@@ -43,10 +44,10 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center mt-8"
         >
-          <Button className="rounded-full px-8 py-6" size="lg" asChild>
+          <Button className="rounded-full px-8 py-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-md hover:shadow-lg" size="lg" asChild>
             <a href="#contact">Get in touch</a>
           </Button>
-          <Button variant="outline" className="rounded-full px-8 py-6" size="lg" asChild>
+          <Button variant="outline" className="rounded-full px-8 py-6 border-2 border-purple-300 dark:border-purple-800 hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-all duration-300" size="lg" asChild>
             <a href="#projects">View my work</a>
           </Button>
         </motion.div>
@@ -55,7 +56,7 @@ export function Hero() {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <a href="#about" className="text-muted-foreground flex flex-col items-center">
           <span className="text-sm mb-2">Scroll down</span>
-          <ArrowDown size={18} />
+          <ArrowDown size={18} className="text-purple-500" />
         </a>
       </div>
     </section>

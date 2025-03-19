@@ -12,6 +12,7 @@ type Skill = {
 type SkillCategory = {
   name: string;
   icon: string;
+  color: string;
   skills: Skill[];
 };
 
@@ -19,6 +20,7 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Frontend",
     icon: "💻",
+    color: "from-blue-500 to-cyan-400",
     skills: [
       { name: "React", level: 90, category: 'frontend' },
       { name: "TypeScript", level: 85, category: 'frontend' },
@@ -31,6 +33,7 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Backend",
     icon: "🔧",
+    color: "from-purple-500 to-indigo-500",
     skills: [
       { name: "Node.js", level: 85, category: 'backend' },
       { name: "Express", level: 80, category: 'backend' },
@@ -43,6 +46,7 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Design",
     icon: "🎨",
+    color: "from-pink-500 to-rose-400",
     skills: [
       { name: "UI/UX Design", level: 85, category: 'design' },
       { name: "Figma", level: 90, category: 'design' },
@@ -55,6 +59,7 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Tools & Others",
     icon: "🛠️",
+    color: "from-amber-500 to-orange-400",
     skills: [
       { name: "Git", level: 90, category: 'tools' },
       { name: "Docker", level: 70, category: 'tools' },
@@ -68,7 +73,7 @@ const skillCategories: SkillCategory[] = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-20 px-6 md:px-12">
+    <section id="skills" className="py-20 px-6 md:px-12 bg-gradient-to-b from-white to-purple-50 dark:from-background dark:to-purple-950/10">
       <div className="container mx-auto max-w-6xl">
         <div className="mb-16 text-center">
           <motion.span
@@ -76,7 +81,7 @@ export function Skills() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-block text-primary text-sm font-medium tracking-wider uppercase mb-3"
+            className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 text-sm font-medium tracking-wider uppercase mb-3"
           >
             My Expertise
           </motion.span>
@@ -100,10 +105,10 @@ export function Skills() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 * categoryIndex }}
             >
-              <Card className="h-full">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 border-t-4 bg-white/80 backdrop-blur-sm dark:bg-background/80" style={{ borderTopColor: `rgb(${categoryIndex === 0 ? '59, 130, 246' : categoryIndex === 1 ? '139, 92, 246' : categoryIndex === 2 ? '236, 72, 153' : '245, 158, 11'})` }}>
                 <CardContent className="p-6">
                   <div className="flex items-center mb-6">
-                    <span className="text-2xl mr-3">{category.name}</span>
+                    <span className="text-2xl mr-3">{category.icon} {category.name}</span>
                   </div>
 
                   <div className="space-y-6">
@@ -111,11 +116,11 @@ export function Skills() {
                       <div key={skill.name}>
                         <div className="flex justify-between items-center mb-2">
                           <span className="font-medium">{skill.name}</span>
-                          <Badge variant="outline">{skill.level}%</Badge>
+                          <Badge className={`bg-gradient-to-r ${category.color} text-white`}>{skill.level}%</Badge>
                         </div>
                         <div className="progress-bar h-2">
                           <motion.div
-                            className="h-full bg-primary rounded-full"
+                            className={`h-full rounded-full bg-gradient-to-r ${category.color}`}
                             initial={{ width: 0 }}
                             whileInView={{ width: `${skill.level}%` }}
                             viewport={{ once: true }}

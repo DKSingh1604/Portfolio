@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export function Hero() {
   const [showFullName, setShowFullName] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     // Show full name after a delay
@@ -132,7 +134,7 @@ export function Hero() {
         </motion.div>
       </div>
       
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className={`absolute bottom-8 ${isMobile ? 'left-1/2 transform -translate-x-1/2 text-center' : 'left-1/2 transform -translate-x-1/2'} animate-bounce`}>
         <a href="#about" className="text-muted-foreground flex flex-col items-center">
           <span className="text-sm mb-2">Scroll down</span>
           <ArrowDown size={18} className="text-purple-500" />

@@ -2,8 +2,20 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 export function Hero() {
+  const [showFullName, setShowFullName] = useState(false);
+
+  useEffect(() => {
+    // Show full name after a delay
+    const timer = setTimeout(() => {
+      setShowFullName(true);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   // Text animation variants
   const nameAnimation = {
     hidden: { opacity: 0 },
@@ -34,6 +46,7 @@ export function Hero() {
   };
 
   const fullName = "Dev Karan Singh";
+  const initials = "DKS";
   
   return (
     <section className="min-h-screen flex items-center justify-center relative px-6 md:px-12 py-20">
@@ -64,15 +77,29 @@ export function Hero() {
             initial="hidden"
             animate="visible"
           >
-            {fullName.split("").map((letter, index) => (
-              <motion.span
-                key={index}
-                className={letter === " " ? "inline-block mr-2" : "inline-block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"}
-                variants={letterAnimation}
-              >
-                {letter}
-              </motion.span>
-            ))}
+            {showFullName ? (
+              // Full name with animation for each letter
+              fullName.split("").map((letter, index) => (
+                <motion.span
+                  key={`full-${index}`}
+                  className={letter === " " ? "inline-block mr-2" : "inline-block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"}
+                  variants={letterAnimation}
+                >
+                  {letter}
+                </motion.span>
+              ))
+            ) : (
+              // Just the initials with animation
+              initials.split("").map((letter, index) => (
+                <motion.span
+                  key={`initial-${index}`}
+                  className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
+                  variants={letterAnimation}
+                >
+                  {letter}
+                </motion.span>
+              ))
+            )}
           </motion.span>
         </motion.h1>
         

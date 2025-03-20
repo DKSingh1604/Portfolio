@@ -82,6 +82,7 @@ export function Header() {
             <NavItem href="#projects" label="Projects" isMobile onClick={closeMobileMenu} />
             <NavItem href="#skills" label="Skills" isMobile onClick={closeMobileMenu} />
             <NavItem href="#contact" label="Contact" isMobile onClick={closeMobileMenu} />
+            <NavItem href="https://drive.google.com/file/d/1vHTQUFcGzrDO6E_XmSZ1dHqa4ZU6mjD4/view?usp=sharing" label="My Resume" isMobile onClick={closeMobileMenu} />
           </ul>
         </div>
       </div>

@@ -48,7 +48,7 @@ export function Hero() {
   };
 
   const fullName = "Dev Karan Singh";
-  const initials = "DKS";
+  const initials = "D K Singh";
   
   return (
     <section className="min-h-screen flex items-center justify-center relative px-6 md:px-12 py-20">

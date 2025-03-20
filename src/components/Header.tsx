@@ -52,6 +52,8 @@ export function Header() {
             <NavItem href="#projects" label="Projects" />
             <NavItem href="#skills" label="Skills" />
             <NavItem href="#contact" label="Contact" />
+            <NavItem href="https://drive.google.com/file/d/1vHTQUFcGzrDO6E_XmSZ1dHqa4ZU6mjD4/view?usp=sharing" label="My Resume" />
+
           </ul>
           <ThemeToggle />
         </nav>

@@ -76,7 +76,7 @@ export function About() {
           <div>
             <motion.img
               
-              src="/Me.jpg"
+              src="/dp_2_zoomed.png"
               alt="Dev Karan Singh"
               className="w-full h-auto rounded-2xl shadow-lg object-cover mb-8"
               initial={{ opacity: 0, scale: 0.9 }}

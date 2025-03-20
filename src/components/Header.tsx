@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { ThemeToggle } from './ThemeToggle';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const NavItem = ({ href, label, isMobile, onClick }: { href: string; label: string; isMobile?: boolean; onClick?: () => void }) => (
   <li>
@@ -22,6 +23,7 @@ const NavItem = ({ href, label, isMobile, onClick }: { href: string; label: stri
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isLogoHovered, setIsLogoHovered] = useState(false);
   
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
   const closeMobileMenu = () => setMobileMenuOpen(false);
@@ -41,8 +43,37 @@ export function Header() {
       scrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : "bg-transparent"
     )}>
       <div className="container mx-auto flex justify-between items-center">
-        <a href="#" className="text-xl font-medium">
-          <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-semibold">DK</span>
+        <a 
+          href="#" 
+          className="text-xl font-medium relative"
+          onMouseEnter={() => setIsLogoHovered(true)}
+          onMouseLeave={() => setIsLogoHovered(false)}
+        >
+          <AnimatePresence initial={false} mode="wait">
+            {isLogoHovered ? (
+              <motion.span 
+                key="full-name"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-semibold"
+                initial={{ opacity: 0, width: 0 }}
+                animate={{ opacity: 1, width: "auto" }}
+                exit={{ opacity: 0, width: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                Dev Karan
+              </motion.span>
+            ) : (
+              <motion.span 
+                key="initials"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-semibold"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                DK
+              </motion.span>
+            )}
+          </AnimatePresence>
         </a>
         
         {/* Desktop Navigation */}
@@ -53,7 +84,6 @@ export function Header() {
             <NavItem href="#skills" label="Skills" />
             <NavItem href="#contact" label="Contact" />
             <NavItem href="https://drive.google.com/file/d/1vHTQUFcGzrDO6E_XmSZ1dHqa4ZU6mjD4/view?usp=sharing" label="My Resume" />
-
           </ul>
           <ThemeToggle />
         </nav>

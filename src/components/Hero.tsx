@@ -62,7 +62,7 @@ export function Hero() {
           transition={{ duration: 0.8 }}
         >
           <span className="inline-block font-medium text-sm md:text-base text-muted-foreground tracking-wider uppercase mb-3 px-4 py-1 rounded-full border border-border backdrop-blur-sm bg-gradient-to-r from-blue-100/50 to-purple-100/50 dark:from-blue-900/20 dark:to-purple-900/20">
-            Application Developer & Designer
+            Mobile Application Developer & Designer
           </span>
         </motion.div>
         

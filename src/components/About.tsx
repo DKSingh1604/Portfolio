@@ -36,13 +36,13 @@ const educationData: EducationItem[] = [
   {
     degree: "B.Tech. in Computer Science",
     institution: "SRM Institute of Science and Technology (8.4 CGPA)",
-    period: "2022- 2026",
+    period: "2022 - 26",
     description: "Specialised in Software Developent and core Computer Application skills."
   },
   {
     degree: "12th",
     institution: "R.A.N Public School (90%)",
-    period: "2021 - 2022",
+    period: "2021 - 22",
     description: "Specialized in human-computer interaction and advanced software development methodologies."
   },
 ];

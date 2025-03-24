@@ -46,7 +46,7 @@ export function Hero() {
     },
   };
 
-  // Intro text animation variant
+  
   const introTextAnimation = {
     initial: { x: 0 },
     animate: { 
@@ -90,7 +90,7 @@ export function Hero() {
             initial="initial"
             animate="animate"
           >
-            Hi, I'm{" "}
+            Hi, I'm {"  "}
           </motion.span>
           <motion.span
             className="inline-block"

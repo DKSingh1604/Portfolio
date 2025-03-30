@@ -17,7 +17,7 @@ export function Hero() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Text animation variants
+  // Text animation
   const nameAnimation = {
     hidden: { opacity: 0 },
     visible: {

@@ -84,7 +84,7 @@ export function Header() {
             <NavItem href="#projects" label="Projects" />
             <NavItem href="#skills" label="Skills" />
             <NavItem href="#contact" label="Contact" />
-            <NavItem href="/resume.pdf" label="My Resume" target="_blank" rel="noopener noreferrer" />
+            <NavItem href="/DevKaran_Resume.pdf" label="My Resume" target="_blank" rel="noopener noreferrer" />
           </ul>
           <ThemeToggle />
         </nav>
@@ -113,11 +113,8 @@ export function Header() {
             <NavItem href="#projects" label="Projects" isMobile onClick={closeMobileMenu} />
             <NavItem href="#skills" label="Skills" isMobile onClick={closeMobileMenu} />
             <NavItem href="#contact" label="Contact" isMobile onClick={closeMobileMenu} />
-<<<<<<< HEAD
             <NavItem href="/DevKaran_Resume.pdf" label="My Resume" isMobile onClick={closeMobileMenu} target="_blank" rel="noopener noreferrer" />
-=======
-            <NavItem href="https://drive.google.com/drive/folders/1LKEtAo_uQc6P3Agyacoy6uzNplzpF-9g?usp=drive_link" label="My Resume" isMobile onClick={closeMobileMenu} />
->>>>>>> 813269fd2afb2726837213ba33ce0d70233a3adc
+            {/* <NavItem href="https://drive.google.com/drive/folders/1LKEtAo_uQc6P3Agyacoy6uzNplzpF-9g?usp=drive_link" label="My Resume" isMobile onClick={closeMobileMenu} /> */}
           </ul>
         </div>
       </div>

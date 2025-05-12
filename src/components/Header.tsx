@@ -1,11 +1,10 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { ThemeToggle } from './ThemeToggle';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const NavItem = ({ href, label, isMobile, onClick }: { href: string; label: string; isMobile?: boolean; onClick?: () => void }) => (
+const NavItem = ({ href, label, isMobile, onClick, target, rel }: { href: string; label: string; isMobile?: boolean; onClick?: () => void; target?: string; rel?: string }) => (
   <li>
     <a 
       href={href} 
@@ -14,6 +13,8 @@ const NavItem = ({ href, label, isMobile, onClick }: { href: string; label: stri
         isMobile ? "block py-3 text-xl" : "inline-block"
       )}
       onClick={onClick}
+      target={target}
+      rel={rel}
     >
       {label}
     </a>
@@ -83,7 +84,7 @@ export function Header() {
             <NavItem href="#projects" label="Projects" />
             <NavItem href="#skills" label="Skills" />
             <NavItem href="#contact" label="Contact" />
-            <NavItem href="https://drive.google.com/file/d/1vHTQUFcGzrDO6E_XmSZ1dHqa4ZU6mjD4/view?usp=sharing" label="My Resume" />
+            <NavItem href="/resume.pdf" label="My Resume" target="_blank" rel="noopener noreferrer" />
           </ul>
           <ThemeToggle />
         </nav>
@@ -112,7 +113,7 @@ export function Header() {
             <NavItem href="#projects" label="Projects" isMobile onClick={closeMobileMenu} />
             <NavItem href="#skills" label="Skills" isMobile onClick={closeMobileMenu} />
             <NavItem href="#contact" label="Contact" isMobile onClick={closeMobileMenu} />
-            <NavItem href="https://drive.google.com/file/d/1vHTQUFcGzrDO6E_XmSZ1dHqa4ZU6mjD4/view?usp=sharing" label="My Resume" isMobile onClick={closeMobileMenu} />
+            <NavItem href="/DevKaran_Resume.pdf" label="My Resume" isMobile onClick={closeMobileMenu} target="_blank" rel="noopener noreferrer" />
           </ul>
         </div>
       </div>

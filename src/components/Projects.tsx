@@ -71,13 +71,13 @@ const projects: Project[] = [
   },
   {
     id: 6,
-    title: "Aesthetic Music Player",
-    description: "A minimalistic music player with a focus on aesthetics and user experience.",
-    image: "/music_player.jpg",
-    tags: ["Flutter", "Dart", "State Management - Provider", "Figma"],
+    title: "RentCarLe",
+    description: "A car rental app with a user-friendly interface for booking and managing rentals.",
+    image: "/rentcarle.jpg",
+    tags: ["Flutter", "Dart", "State Management - BLoC", "Firebase"],
     category: "frontend",
     // liveUrl: "#",
-    githubUrl: "https://github.com/DKSingh1604/music_player",
+    githubUrl: "https://github.com/DKSingh1604/car_rental",
   },
 ];
 

@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,7 +17,7 @@ export function Hero() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Text animation variants
+  // Text animation
   const nameAnimation = {
     hidden: { opacity: 0 },
     visible: {
@@ -47,6 +46,19 @@ export function Hero() {
     },
   };
 
+  
+  const introTextAnimation = {
+    initial: { x: 0 },
+    animate: { 
+      x: showFullName ? -10 : 0,
+      transition: {
+        type: "spring",
+        damping: 15,
+        stiffness: 100,
+      }
+    }
+  };
+
   const fullName = "Dev Karan Singh";
   const initials = "D K Singh";
   
@@ -72,7 +84,14 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Hi, I'm{" "}
+          <motion.span
+            className="inline-block"
+            variants={introTextAnimation}
+            initial="initial"
+            animate="animate"
+          >
+            Hi, I'm {"  "}
+          </motion.span>
           <motion.span
             className="inline-block"
             variants={nameAnimation}

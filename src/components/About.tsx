@@ -25,7 +25,7 @@ const experienceData: ExperienceItem[] = [
     description: "Led development of modern web applications using React, TypeScript and Next.js. Implemented design systems and optimized application performance."
   },
   {
-    title: "FLutter Developer",
+    title: "Flutter Developer",
     company: "Trucxo",
     period: " May 2025 - Present",
     description: "Developing tech solutions in app for a Trucking and logistics company."

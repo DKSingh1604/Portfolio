@@ -25,10 +25,10 @@ const experienceData: ExperienceItem[] = [
     description: "Led development of modern web applications using React, TypeScript and Next.js. Implemented design systems and optimized application performance."
   },
   {
-    title: "Web/App Developer",
-    company: "Team 1.618",
-    period: " Oct 2023 - Feb 2025",
-    description: "Led development and research of Car Instrumentation and Clusterization app, improving UI/UX and optimizing performance."
+    title: "FLutter Developer",
+    company: "Trucxo",
+    period: " May 2025 - Present",
+    description: "Developing tech solutions in app for a Trucking and logistics company."
   },
 ];
 
@@ -92,7 +92,7 @@ export function About() {
             >
               <h3 className="text-2xl font-semibold mb-4">Who I Am</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
-              Yo! I'm an app developer turning caffeine and code into sleek, high-performance mobile apps. With 2+ years in Flutter, Firebase, and Supabase, I craft smooth UIs and clean code. Always leveling up—Kotlin, Node.js, you name it. Goal? Build cool stuff and break barriers!
+              Yo! I'm an app developer turning caffeine and code into sleek, high-performance mobile apps. With a year of freelance and internship experience in Flutter, I craft smooth UIs and clean code. Always leveling up — Kotlin, Node.js, you name it. Goal? Build cool stuff and break barriers!
               </p>
               {/* <p className="text-muted-foreground leading-relaxed">
                 My approach combines technical expertise with creative problem-solving to deliver solutions that are not only functional but also aesthetically pleasing and intuitive to use. I'm constantly learning and exploring new technologies to stay at the forefront of web development.

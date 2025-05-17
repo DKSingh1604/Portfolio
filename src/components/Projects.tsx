@@ -21,7 +21,7 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Minimal Chat Application",
+    title: "Panchayat",
     description: "A minimalistic chatting platform with minimal chat features.",
     image: "/panchayat_ss.png",
     tags: ["Flutter", "Dart", "Firbase", "State Management - Provider", "Figma"],
@@ -31,7 +31,7 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Food Delivery App",
+    title: "Zwiggy",
     description: "A minimalistic food delivery app showcasing multiple food items and categories.",
     image: "/food_delivery.jpg",
     tags: ["Figma", "Flutter", "Dart", "Firebase", "Provider"],
@@ -41,13 +41,13 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Task Management App",
-    description: "A productivity app for managing tasks, projects, and team collaboration with real-time updates.",
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
+    title: "FIG",
+    description: "A freelance invoice generator app with features for creating and managing invoices.",
+    image: "/FIG.jpg",
     tags: ["Flutter", "Supabase", "State Management - BLoC", "Figma"],
-    category: "frontend",
+    category: "fullstack",
     // liveUrl: "#",
-    githubUrl: "https://github.com/DKSingh1604/todo_using_bloc",
+    githubUrl: "https://github.com/DKSingh1604/Freelancer-Invoice-Generator-App",
   },
   {
     id: 4,

@@ -22,7 +22,7 @@ const experienceData: ExperienceItem[] = [
     title: "Flutter Developer",
     company: "WhiterApps",
     period: " March 2025 - Present",
-    description: "Led development of modern web applications using React, TypeScript and Next.js. Implemented design systems and optimized application performance."
+    description: "Developing client-based solutions in app for leading tech companies."
   },
   {
     title: "Flutter Developer",

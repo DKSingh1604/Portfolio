@@ -20,16 +20,17 @@ type EducationItem = {
 const experienceData: ExperienceItem[] = [
   {
     title: "Flutter Developer",
-    company: "WhiterApps",
-    period: " March 2025 - Present",
-    description: "Developing client-based solutions in app for leading tech companies."
-  },
-  {
-    title: "Flutter Developer",
     company: "Trucxo",
     period: " May 2025 - Present",
     description: "Developing tech solutions in app for a Trucking and logistics company."
   },
+  {
+    title: "Flutter Developer",
+    company: "WhiterApps",
+    period: " March 2025 - Present",
+    description: "Developing client-based solutions in app for leading tech companies."
+  },
+  
 ];
 
 const educationData: EducationItem[] = [

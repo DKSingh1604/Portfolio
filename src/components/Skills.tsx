@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 
 type Skill = {
   name: string;
-  level: number;
+  
   category: 'frontend' | 'backend' | 'design' | 'tools';
 };
 
@@ -21,11 +21,11 @@ const skillCategories: SkillCategory[] = [
     icon: "💻",
     color: "from-blue-500 to-cyan-400",
     skills: [
-      { name: "Flutter", level: 90, category: 'frontend' },
-      { name: "Dart", level: 85, category: 'frontend' },
-      { name: "TailwindCSS", level: 95, category: 'frontend' },
-      { name: "HTML/CSS", level: 95, category: 'frontend' },
-      { name: "JavaScript", level: 90, category: 'frontend' },
+      { name: "Flutter",  category: 'frontend' },
+      { name: "Dart", category: 'frontend' },
+      { name: "TailwindCSS",  category: 'frontend' },
+      { name: "HTML/CSS",  category: 'frontend' },
+      { name: "JavaScript",  category: 'frontend' },
     ],
   },
   {
@@ -33,10 +33,10 @@ const skillCategories: SkillCategory[] = [
     icon: "🔧",
     color: "from-purple-500 to-indigo-500",
     skills: [
-      { name: "Node.js", level: 40, category: 'backend' },
-      { name: "SQLite", level: 70, category: 'backend' },
+      { name: "Node.js",  category: 'backend' },
+      { name: "SQLite",  category: 'backend' },
       
-      { name: "REST APIs", level: 50, category: 'backend' },
+      { name: "REST APIs",  category: 'backend' },
     ],
   },
   {
@@ -44,11 +44,11 @@ const skillCategories: SkillCategory[] = [
     icon: "🎨",
     color: "from-pink-500 to-rose-400",
     skills: [
-      { name: "UI/UX Design", level: 85, category: 'design' },
-      { name: "Figma", level: 90, category: 'design' },
-      { name: "Design Systems", level: 80, category: 'design' },
-      { name: "Responsive Design", level: 95, category: 'design' },
-      { name: "Prototyping", level: 85, category: 'design' },
+      { name: "UI/UX Design", category: 'design' },
+      { name: "Figma",  category: 'design' },
+      { name: "Design Systems", category: 'design' },
+      { name: "Responsive Design",  category: 'design' },
+      { name: "Prototyping",  category: 'design' },
     ],
   },
   {
@@ -56,12 +56,12 @@ const skillCategories: SkillCategory[] = [
     icon: "🛠️",
     color: "from-amber-500 to-orange-400",
     skills: [
-      { name: "Git/Github", level: 90, category: 'tools' },
-      { name: "Docker", level: 70, category: 'tools' },
-      { name: "Firebase/Supabase", level: 75, category: 'tools' },
-      { name: "CI/CD", level: 50, category: 'tools' },
-      { name: "BLoC", level: 80, category: 'tools' },
-      { name: "Postman", level: 70, category: 'tools' },
+      { name: "Git/Github",  category: 'tools' },
+      { name: "Docker",  category: 'tools' },
+      { name: "Firebase/Supabase",  category: 'tools' },
+      { name: "CI/CD",  category: 'tools' },
+      { name: "BLoC", category: 'tools' },
+      { name: "Postman",  category: 'tools' },
     ],
   },
 ];
@@ -111,9 +111,9 @@ export function Skills() {
                       <div key={skill.name}>
                         <div className="flex justify-between items-center mb-2">
                           <span className="font-medium">{skill.name}</span>
-                          <Badge className={`bg-gradient-to-r ${category.color} text-white`}>{skill.level}%</Badge>
+                          {/* <Badge className={`bg-gradient-to-r ${category.color} text-white`}>{skill.level}%</Badge> */}
                         </div>
-                        <div className="progress-bar h-2">
+                        {/* <div className="progress-bar h-2">
                           <motion.div
                             className={`h-full rounded-full bg-gradient-to-r ${category.color}`}
                             initial={{ width: 0 }}
@@ -125,7 +125,7 @@ export function Skills() {
                               ease: "easeOut" 
                             }}
                           />
-                        </div>
+                        </div> */}
                       </div>
                     ))}
                   </div>

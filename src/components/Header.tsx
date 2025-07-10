@@ -84,7 +84,7 @@ export function Header() {
             <NavItem href="#projects" label="Projects" />
             <NavItem href="#skills" label="Skills" />
             <NavItem href="#contact" label="Contact" />
-            <NavItem href="https://drive.google.com/file/d/1dL6LQo95QdX23fLGaMOw2OXEksxhYYK1/view?usp=drive_link" label="My Resume" target="_blank" rel="noopener noreferrer" />
+            <NavItem href="https://drive.google.com/drive/folders/1LKEtAo_uQc6P3Agyacoy6uzNplzpF-9g?usp=drive_link" label="My Resume" target="_blank" rel="noopener noreferrer" />
           </ul>
           <ThemeToggle />
         </nav>

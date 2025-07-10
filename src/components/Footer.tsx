@@ -18,7 +18,7 @@ export function Footer() {
           </div>
           
           <div className="flex space-x-6">
-            <a
+            {/* <a
               href="https://github.com/DKSingh1604/"
               target="_blank"
               rel="noopener noreferrer"
@@ -26,8 +26,8 @@ export function Footer() {
               aria-label="GitHub"
             >
               <Github size={20} />
-            </a>
-            <a
+            </a> */}
+            {/* <a
               href="https://www.linkedin.com/in/dev-karan-singh/"
               target="_blank"
               rel="noopener noreferrer"
@@ -35,8 +35,8 @@ export function Footer() {
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
-            </a>
-            <a
+            </a> */}
+            {/* <a
               href="https://x.com/Dee_Kay_Singh"
               target="_blank"
               rel="noopener noreferrer"
@@ -44,23 +44,23 @@ export function Footer() {
               aria-label="Twitter"
             >
               <Twitter size={20} />
-            </a>
+            </a> */}
           </div>
         </div>
         
-        <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-muted-foreground text-center md:text-left mb-4 md:mb-0">
+        <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-center items-center">
+          <p className="text-sm text-muted-foreground text-center mb-4 md:mb-0">
             © {currentYear} Dev Karan Singh. All rights reserved.
           </p>
           
-          <div className="flex space-x-6">
+          {/* <div className="flex space-x-6">
             <a href="#" className="text-sm text-muted-foreground hover:text-purple-600 transition-colors">
               Privacy Policy
             </a>
             <a href="#" className="text-sm text-muted-foreground hover:text-purple-600 transition-colors">
               Terms of Service
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

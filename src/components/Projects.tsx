@@ -36,7 +36,7 @@ const projects: Project[] = [
     title: "Panchayat",
     description:
       "A minimalistic chatting platform with minimal chat features.",
-    image: "./logos/panchayat.png",
+    image: "./panchayat.png",
     tags: [
       "Flutter",
       "Dart",

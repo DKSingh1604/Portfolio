@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 20%;
 
-    --primary: 210 29% 24%; /* #2C3E50 - Deep steel blue */
+    --primary: 30 67% 41%; /* #D68910 - Deep burnt orange */
     --primary-foreground: 0 0% 100%; /* Pure white */
 
     --secondary: 0 0% 94%; /* Light grey for sections */
@@ -24,7 +24,7 @@
     --muted: 0 0% 88%; /* #E0E0E0 - Subtle grey */
     --muted-foreground: 0 0% 47%; /* #777777 - Medium grey */
 
-    --accent: 210 29% 24%; /* Same as primary - steel blue */
+    --accent: 30 67% 41%; /* Same as primary - deep burnt orange */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,7 +32,7 @@
 
     --border: 0 0% 88%; /* #E0E0E0 */
     --input: 0 0% 88%;
-    --ring: 210 29% 24%; /* Steel blue ring */
+    --ring: 30 67% 41%; /* Deep burnt orange ring */
 
     --radius: 0.5rem;
 
@@ -57,7 +57,7 @@
     --popover: 0 0% 12%;
     --popover-foreground: 0 0% 88%;
 
-    --primary: 210 29% 24%; /* Keep steel blue */
+    --primary: 30 67% 41%; /* Keep deep burnt orange */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 15%; /* Dark secondary */
@@ -66,7 +66,7 @@
     --muted: 0 0% 20%; /* Dark muted */
     --muted-foreground: 0 0% 60%; /* Medium grey */
 
-    --accent: 210 29% 24%; /* Steel blue accent */
+    --accent: 30 67% 41%; /* Deep burnt orange accent */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
@@ -74,7 +74,7 @@
 
     --border: 0 0% 20%; /* Dark border */
     --input: 0 0% 20%;
-    --ring: 210 29% 24%; /* Steel blue ring */
+    --ring: 30 67% 41%; /* Deep burnt orange ring */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

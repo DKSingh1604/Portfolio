@@ -68,7 +68,7 @@ const skillCategories: SkillCategory[] = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-20 px-6 md:px-12 bg-gradient-to-b from-white to-purple-50 dark:from-background dark:to-purple-950/10">
+    <section id="skills" className="py-20 px-6 md:px-12 bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="mb-16 text-center">
           <motion.span
@@ -76,7 +76,7 @@ export function Skills() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 text-sm font-medium tracking-wider uppercase mb-3"
+            className="inline-block text-primary text-sm font-medium tracking-wider uppercase mb-3"
           >
             My Expertise
           </motion.span>
@@ -100,18 +100,18 @@ export function Skills() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 * categoryIndex }}
             >
-              <Card className="h-full hover:shadow-lg transition-all duration-300 border-t-4 bg-white/80 backdrop-blur-sm dark:bg-background/80" style={{ borderTopColor: `rgb(${categoryIndex === 0 ? '59, 130, 246' : categoryIndex === 1 ? '139, 92, 246' : categoryIndex === 2 ? '236, 72, 153' : '245, 158, 11'})` }}>
+              <Card className="h-full hover:shadow-lg transition-all duration-300 border-l-4 border-l-primary bg-card">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-6">
-                    <span className="text-2xl mr-3">{category.icon} {category.name}</span>
+                    <span className="text-2xl mr-3 font-bold text-foreground">{category.icon}</span>
+                    <h3 className="text-xl font-bold text-foreground">{category.name}</h3>
                   </div>
 
                   <div className="space-y-6">
                     {category.skills.map((skill, skillIndex) => (
                       <div key={skill.name}>
                         <div className="flex justify-between items-center mb-2">
-                          <span className="font-medium">{skill.name}</span>
-                          {/* <Badge className={`bg-gradient-to-r ${category.color} text-white`}>{skill.level}%</Badge> */}
+                          <span className="font-medium text-foreground">{skill.name}</span>
                         </div>
                         {/* <div className="progress-bar h-2">
                           <motion.div

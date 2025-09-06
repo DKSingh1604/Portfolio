@@ -28,7 +28,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-white via-purple-50/30 to-blue-50/30 dark:from-background dark:via-purple-950/5 dark:to-blue-950/5">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-background to-muted">
       <Header />
       <Hero />
       <About />

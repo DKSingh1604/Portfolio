@@ -63,9 +63,8 @@ export function Hero() {
   const initials = "D K Singh";
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative px-6 md:px-12 py-20">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-blue-950/30 dark:via-purple-950/30 dark:to-pink-950/30"></div>
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0.02)_0,_rgba(0,0,0,0)_100%)]"></div>
+    <section className="min-h-screen flex items-center justify-center relative px-6 md:px-12 py-20 bg-background">
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-background to-secondary/50"></div>
 
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <motion.div
@@ -73,13 +72,13 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block font-medium text-sm md:text-base text-muted-foreground tracking-wider uppercase mb-3 px-4 py-1 rounded-full border border-border backdrop-blur-sm bg-gradient-to-r from-blue-100/50 to-purple-100/50 dark:from-blue-900/20 dark:to-purple-900/20">
+          <span className="inline-block font-medium text-sm md:text-base text-muted-foreground tracking-wider uppercase mb-3 px-4 py-1 rounded-md border border-border bg-card">
             Mobile And Web Application Developer
           </span>
         </motion.div>
 
         <motion.h1
-          className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-foreground"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -108,7 +107,7 @@ export function Hero() {
                       className={
                         letter === " "
                           ? "inline-block mr-2"
-                          : "inline-block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
+                          : "inline-block text-primary font-bold"
                       }
                       variants={letterAnimation}
                     >
@@ -121,7 +120,7 @@ export function Hero() {
                   .map((letter, index) => (
                     <motion.span
                       key={`initial-${index}`}
-                      className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
+                      className="inline-block text-primary font-bold"
                       variants={letterAnimation}
                     >
                       {letter}
@@ -131,18 +130,7 @@ export function Hero() {
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed italic"
-          style={{
-            fontFamily:
-              "'Dancing Script', cursive",
-            fontSize: "1.3rem",
-            lineHeight: "2.5rem",
-            backgroundColor: "#1e293b",
-            color: "#ffffff",
-            padding: "12px 12px",
-            borderRadius: "12px",
-            display: "inline-block",
-          }}
+          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-medium bg-card px-6 py-4 rounded-md border border-border"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -164,7 +152,7 @@ export function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center mt-8"
         >
           <Button
-            className="rounded-full px-8 py-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-md hover:shadow-lg"
+            className="px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 shadow-sm hover:shadow-md font-medium"
             size="lg"
             asChild
           >
@@ -172,7 +160,7 @@ export function Hero() {
           </Button>
           <Button
             variant="outline"
-            className="rounded-full px-8 py-6 border-2 border-purple-300 dark:border-purple-800 hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-all duration-300"
+            className="px-8 py-6 border-border hover:bg-secondary transition-all duration-300 font-medium"
             size="lg"
             asChild
           >
@@ -190,14 +178,14 @@ export function Hero() {
       >
         <a
           href="#about"
-          className="text-muted-foreground flex flex-col items-center"
+          className="text-muted-foreground hover:text-primary flex flex-col items-center transition-colors"
         >
           <span className="text-sm mb-2">
             Scroll down
           </span>
           <ArrowDown
             size={18}
-            className="text-purple-500"
+            className="text-primary"
           />
         </a>
       </div>

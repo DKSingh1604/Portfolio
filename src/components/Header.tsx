@@ -54,7 +54,7 @@ export function Header() {
             {isLogoHovered ? (
               <motion.span 
                 key="full-name"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-semibold"
+                className="text-primary font-bold"
                 initial={{ opacity: 0, width: 0 }}
                 animate={{ opacity: 1, width: "auto" }}
                 exit={{ opacity: 0, width: 0 }}
@@ -65,7 +65,7 @@ export function Header() {
             ) : (
               <motion.span 
                 key="initials"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-semibold"
+                className="text-primary font-bold"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -93,7 +93,7 @@ export function Header() {
         <div className="md:hidden flex items-center gap-2">
           <ThemeToggle />
           <button 
-            className="text-foreground p-1 rounded-md hover:text-purple-600 transition-colors"
+            className="text-foreground p-1 rounded-md hover:text-primary transition-colors"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >

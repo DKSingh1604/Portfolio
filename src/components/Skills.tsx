@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 type Skill = {
   name: string;
-  
-  category: 'frontend' | 'backend' | 'design' | 'tools';
+
+  category:
+    | "frontend"
+    | "backend"
+    | "design"
+    | "tools";
 };
 
 type SkillCategory = {
@@ -17,58 +24,109 @@ type SkillCategory = {
 
 const skillCategories: SkillCategory[] = [
   {
-    name: "Frontend",
+    name: "Frontend Development",
     icon: "💻",
     color: "from-blue-500 to-cyan-400",
     skills: [
-      { name: "Flutter",  category: 'frontend' },
-      { name: "Dart", category: 'frontend' },
-      { name: "TailwindCSS",  category: 'frontend' },
-      { name: "HTML/CSS",  category: 'frontend' },
-      { name: "JavaScript",  category: 'frontend' },
+      { name: "Flutter", category: "frontend" },
+      { name: "Dart", category: "frontend" },
+      { name: "React", category: "frontend" },
+      {
+        name: "TypeScript",
+        category: "frontend",
+      },
+      {
+        name: "TailwindCSS",
+        category: "frontend",
+      },
+      { name: "HTML/CSS", category: "frontend" },
     ],
   },
   {
-    name: "Backend",
+    name: "Backend & APIs",
     icon: "🔧",
     color: "from-purple-500 to-indigo-500",
     skills: [
-      { name: "Node.js",  category: 'backend' },
-      { name: "SQLite",  category: 'backend' },
-      
-      { name: "REST APIs",  category: 'backend' },
+      { name: "Node.js", category: "backend" },
+      { name: "Express.js", category: "backend" },
+      { name: "Firebase", category: "backend" },
+      { name: "Supabase", category: "backend" },
+      { name: "REST APIs", category: "backend" },
+      {
+        name: "Authentication",
+        category: "backend",
+      },
     ],
   },
   {
-    name: "Design",
+    name: "Design & UX",
     icon: "🎨",
     color: "from-pink-500 to-rose-400",
     skills: [
-      { name: "UI/UX Design", category: 'design' },
-      { name: "Figma",  category: 'design' },
-      { name: "Design Systems", category: 'design' },
-      { name: "Responsive Design",  category: 'design' },
-      { name: "Prototyping",  category: 'design' },
+      {
+        name: "UI/UX Design",
+        category: "design",
+      },
+      { name: "Figma", category: "design" },
+      { name: "Stitch AI", category: "design" },
+      {
+        name: "Design Systems",
+        category: "design",
+      },
+      {
+        name: "Responsive Design",
+        category: "design",
+      },
+      { name: "Prototyping", category: "design" },
     ],
   },
   {
-    name: "Tools & Others",
+    name: "Database & Storage",
+    icon: "�️",
+    color: "from-green-500 to-emerald-600",
+    skills: [
+      { name: "MongoDB", category: "backend" },
+      {
+        name: "Firebase Firestore",
+        category: "backend",
+      },
+      { name: "Supabase", category: "backend" },
+      {
+        name: "Local Storage",
+        category: "backend",
+      },
+      {
+        name: "Shared Preferences",
+        category: "backend",
+      },
+    ],
+  },
+  {
+    name: "Tools & DevOps",
     icon: "🛠️",
     color: "from-amber-500 to-orange-400",
     skills: [
-      { name: "Git/Github",  category: 'tools' },
-      { name: "Docker",  category: 'tools' },
-      { name: "Firebase/Supabase",  category: 'tools' },
-      { name: "CI/CD",  category: 'tools' },
-      { name: "BLoC", category: 'tools' },
-      { name: "Postman",  category: 'tools' },
+      { name: "Git/GitHub", category: "tools" },
+      { name: "VS Code", category: "tools" },
+      {
+        name: "Android Studio",
+        category: "tools",
+      },
+      { name: "Postman", category: "tools" },
+      {
+        name: "Chrome DevTools",
+        category: "tools",
+      },
     ],
   },
 ];
 
 export function Skills() {
   return (
-    <section id="skills" className="py-20 px-6 md:px-12 bg-gradient-to-b from-white to-purple-50 dark:from-background dark:to-purple-950/10">
+    <section
+      id="skills"
+      className="py-20 px-6 md:px-12 bg-gradient-to-b from-white to-purple-50 dark:from-background dark:to-purple-950/10"
+    >
       <div className="container mx-auto max-w-6xl">
         <div className="mb-16 text-center">
           <motion.span
@@ -84,55 +142,81 @@ export function Skills() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{
+              duration: 0.5,
+              delay: 0.2,
+            }}
             className="text-3xl md:text-4xl font-bold"
           >
             Skills & Technologies
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {skillCategories.map((category, categoryIndex) => (
-            <motion.div
-              key={category.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 * categoryIndex }}
-            >
-              <Card className="h-full hover:shadow-lg transition-all duration-300 border-t-4 bg-white/80 backdrop-blur-sm dark:bg-background/80" style={{ borderTopColor: `rgb(${categoryIndex === 0 ? '59, 130, 246' : categoryIndex === 1 ? '139, 92, 246' : categoryIndex === 2 ? '236, 72, 153' : '245, 158, 11'})` }}>
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-6">
-                    <span className="text-2xl mr-3">{category.icon} {category.name}</span>
-                  </div>
-
-                  <div className="space-y-6">
-                    {category.skills.map((skill, skillIndex) => (
-                      <div key={skill.name}>
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="font-medium">{skill.name}</span>
-                          {/* <Badge className={`bg-gradient-to-r ${category.color} text-white`}>{skill.level}%</Badge> */}
-                        </div>
-                        {/* <div className="progress-bar h-2">
-                          <motion.div
-                            className={`h-full rounded-full bg-gradient-to-r ${category.color}`}
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${skill.level}%` }}
-                            viewport={{ once: true }}
-                            transition={{ 
-                              duration: 1, 
-                              delay: 0.2 + (0.1 * skillIndex),
-                              ease: "easeOut" 
-                            }}
-                          />
-                        </div> */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skillCategories.map(
+            (category, categoryIndex) => (
+              <motion.div
+                key={category.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.1 * categoryIndex,
+                }}
+                className="group"
+              >
+                <Card className="h-full hover:shadow-xl transition-all duration-300 border border-border/40 bg-card/70 backdrop-blur-sm hover:-translate-y-1">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-6">
+                      <div
+                        className={`p-3 rounded-lg bg-gradient-to-r ${category.color} mr-4`}
+                      >
+                        <span className="text-xl text-white">
+                          {category.icon}
+                        </span>
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                      <h3 className="text-lg font-semibold text-foreground">
+                        {category.name}
+                      </h3>
+                    </div>
+
+                    <div className="grid grid-cols-1 gap-3">
+                      {category.skills.map(
+                        (skill, skillIndex) => (
+                          <motion.div
+                            key={skill.name}
+                            initial={{
+                              opacity: 0,
+                              x: -20,
+                            }}
+                            whileInView={{
+                              opacity: 1,
+                              x: 0,
+                            }}
+                            viewport={{
+                              once: true,
+                            }}
+                            transition={{
+                              duration: 0.3,
+                              delay:
+                                0.05 * skillIndex,
+                            }}
+                            className="flex items-center p-2 rounded-md hover:bg-secondary/50 transition-colors duration-200"
+                          >
+                            <div className="w-2 h-2 bg-gradient-to-r from-primary to-primary/60 rounded-full mr-3 flex-shrink-0"></div>
+                            <span className="font-medium text-sm text-foreground/90">
+                              {skill.name}
+                            </span>
+                          </motion.div>
+                        )
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            )
+          )}
         </div>
       </div>
     </section>

@@ -86,20 +86,21 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    title: "E-Commerce App",
+    title: "CryptoTax Helper",
     description:
-      "A content management system for travel bloggers with rich text editing and media management.",
-    image: "/e_commerce.jpg",
+      "A mobile application designed to simplify cryptocurrency tax tracking and portfolio management.",
+    image: "/crypto.png",
     tags: [
       "Flutter",
       "Dart",
       "Figma",
-      "State Managment - BLoC",
+      "Firebase",
+      "Fl-chart",
     ],
     category: "frontend",
     // liveUrl: "#",
     githubUrl:
-      "https://github.com/DKSingh1604/ecom_bloc",
+      "https://github.com/DKSingh1604/cryptotax_helper",
   },
   {
     id: 5,

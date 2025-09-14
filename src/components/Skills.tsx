@@ -1,18 +1,11 @@
 import { motion } from "framer-motion";
-import {
-  Card,
-  CardContent,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 type Skill = {
   name: string;
 
-  category:
-    | "frontend"
-    | "backend"
-    | "design"
-    | "tools";
+  category: "frontend" | "backend" | "design" | "tools";
 };
 
 type SkillCategory = {
@@ -82,7 +75,7 @@ const skillCategories: SkillCategory[] = [
   },
   {
     name: "Database & Storage",
-    icon: "�️",
+    icon: "🗄️",
     color: "from-green-500 to-emerald-600",
     skills: [
       { name: "MongoDB", category: "backend" },
@@ -161,50 +154,35 @@ export function Skills() {
               <Card className="h-full hover:shadow-lg transition-all duration-300 border-l-4 border-l-primary bg-card">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-6">
-                    <span className="text-2xl mr-3 font-bold text-foreground">{category.icon}</span>
+                    <span className="text-2xl mr-3 font-bold text-foreground">
+                      {category.icon}
+                    </span>
                     <h3 className="text-xl font-bold text-foreground">{category.name}</h3>
                   </div>
 
                   <div className="space-y-6">
                     {category.skills.map((skill, skillIndex) => (
-                      <div key={skill.name}>
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="font-medium text-foreground">{skill.name}</span>
+                      <motion.div
+                        key={skill.name}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3, delay: 0.05 * skillIndex }}
+                        className="flex items-center justify-between p-2 rounded-md hover:bg-secondary/50 transition-colors duration-200"
+                      >
+                        <div className="flex items-center">
+                          <div className="w-2 h-2 bg-gradient-to-r from-primary to-primary/60 rounded-full mr-3 flex-shrink-0" />
+                          <span className="font-medium text-foreground/90">
+                            {skill.name}
+                          </span>
                         </div>
-                        {/* <div className="progress-bar h-2">
-                          <motion.div
-                            key={skill.name}
-                            initial={{
-                              opacity: 0,
-                              x: -20,
-                            }}
-                            whileInView={{
-                              opacity: 1,
-                              x: 0,
-                            }}
-                            viewport={{
-                              once: true,
-                            }}
-                            transition={{
-                              duration: 0.3,
-                              delay:
-                                0.05 * skillIndex,
-                            }}
-                            className="flex items-center p-2 rounded-md hover:bg-secondary/50 transition-colors duration-200"
-                          >
-                            <div className="w-2 h-2 bg-gradient-to-r from-primary to-primary/60 rounded-full mr-3 flex-shrink-0"></div>
-                            <span className="font-medium text-sm text-foreground/90">
-                              {skill.name}
-                            </span>
-                          </motion.div>
-                        )
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            )
-          )}
+                      </motion.div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

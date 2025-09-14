@@ -1,24 +1,12 @@
 import { useEffect } from "react";
-import {
-  Calendar,
-  Clock,
-  Video,
-} from "lucide-react";
+import { Calendar, Clock, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 declare global {
   interface Window {
     Cal: {
-      (
-        action: string,
-        options?: Record<string, unknown>
-      ): void;
+      (action: string, options?: Record<string, unknown>): void;
       loaded?: boolean;
       q?: unknown[];
     };
@@ -26,20 +14,18 @@ declare global {
 }
 
 interface CalBookingProps {
-  calUsername?: string; // Your Cal.com username
+  // Accept either a username or a full event path (e.g. "devkaransingh/30min")
+  calUsername?: string; // Your Cal.com username or username/event
   className?: string;
 }
 
 export function CalBooking({
-  calUsername = "your-username",
+  calUsername = "devkaransingh/30min",
   className,
 }: CalBookingProps) {
   useEffect(() => {
     // Initialize Cal.com when component mounts
-    if (
-      typeof window !== "undefined" &&
-      window.Cal
-    ) {
+    if (typeof window !== "undefined" && window.Cal) {
       window.Cal("init", {
         origin: "https://app.cal.com",
       });
@@ -47,42 +33,51 @@ export function CalBooking({
   }, []);
 
   const openCalModal = () => {
+    const calLink = calUsername || "devkaransingh/30min";
+
     if (window.Cal) {
-      window.Cal("openModal", {
-        calLink: calUsername,
-        config: {
-          name: "Dev Karan Singh",
-          email: "dev1604karan@gmail.com",
-          notes: "Portfolio consultation",
-          guests: [],
-          theme: "light",
-        },
-      });
+      try {
+        window.Cal("openModal", {
+          calLink,
+          config: {
+            name: "Dev Karan Singh",
+            email: "dev1604karan@gmail.com",
+            notes: "Portfolio consultation",
+            guests: [],
+            theme: "light",
+          },
+        });
+        return;
+      } catch (err) {
+        // If the embed API fails for some reason we fall through to opening the link directly
+        console.warn("Cal modal failed, falling back to opening cal.com page:", err);
+      }
     }
+
+    // Fallback: open the cal.com booking page in a new tab
+    const url = calLink.startsWith("http") ? calLink : `https://cal.com/${calLink}`;
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   const meetingTypes = [
     {
       icon: <Video className="h-5 w-5" />,
       title: "30-Min Discovery Call",
-      description:
-        "Let's discuss your project requirements and goals",
+      description: "Let's discuss your project requirements and goals",
       duration: "30 minutes",
       type: "video",
     },
     {
       icon: <Calendar className="h-5 w-5" />,
       title: "Project Consultation",
-      description:
-        "In-depth discussion about your development needs",
+      description: "In-depth discussion about your development needs",
       duration: "60 minutes",
       type: "consultation",
     },
     {
       icon: <Clock className="h-5 w-5" />,
       title: "Quick Chat",
-      description:
-        "Brief discussion for simple questions or guidance",
+      description: "Brief discussion for simple questions or guidance",
       duration: "15 minutes",
       type: "quick",
     },
@@ -91,12 +86,9 @@ export function CalBooking({
   return (
     <div className={`space-y-6 ${className}`}>
       <div className="text-center mb-8">
-        <h3 className="text-2xl font-semibold mb-4">
-          Schedule a Meeting
-        </h3>
+        <h3 className="text-2xl font-semibold mb-4">Schedule a Meeting</h3>
         <p className="text-muted-foreground">
-          Ready to start your project? Book a call
-          with me to discuss your ideas.
+          Ready to start your project? Book a call with me to discuss your ideas.
         </p>
       </div>
 
@@ -111,17 +103,13 @@ export function CalBooking({
               <div className="mx-auto mb-3 p-3 rounded-full bg-primary/10 w-fit">
                 {meeting.icon}
               </div>
-              <CardTitle className="text-lg">
-                {meeting.title}
-              </CardTitle>
+              <CardTitle className="text-lg">{meeting.title}</CardTitle>
               <p className="text-sm text-muted-foreground font-medium">
                 {meeting.duration}
               </p>
             </CardHeader>
             <CardContent className="text-center">
-              <p className="text-sm text-muted-foreground mb-4">
-                {meeting.description}
-              </p>
+              <p className="text-sm text-muted-foreground mb-4">{meeting.description}</p>
               <Button
                 className="w-full"
                 onClick={(e) => {

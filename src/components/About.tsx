@@ -29,7 +29,7 @@ const experienceData: ExperienceItem[] = [
     company: "Heizen",
     period: " Nov 2025 - Present",
     description:
-      "Developing tech solutions in app for a Trucking and logistics company.",
+      "Delivering AI + Human ship production-grade software solutions for various industries.",
   },
   {
     title: "Flutter Developer",

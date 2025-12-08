@@ -25,18 +25,18 @@ type EducationItem = {
 
 const experienceData: ExperienceItem[] = [
   {
-    title: "Flutter Developer",
-    company: "Trucxo",
-    period: " May 2025 - Present",
+    title: "SDE Intern",
+    company: "Heizen",
+    period: " Nov 2025 - Present",
     description:
-      "Developing tech solutions in app for a Trucking and logistics company.",
+      "Delivering AI + Human ship production-grade software solutions for various industries.",
   },
   {
     title: "Flutter Developer",
-    company: "WhiterApps",
-    period: " March 2025 - Present",
+    company: "Trucxo",
+    period: " May 2025 - Nov 2025",
     description:
-      "Developing client-based solutions in app for leading tech companies.",
+      "Developing tech solutions in app for a Trucking and logistics company.",
   },
 ];
 
@@ -92,7 +92,7 @@ export function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div>
             <motion.img
-              src="/dp_2_zoomed.png"
+              src="/me.jpeg"
               alt="Dev Karan Singh"
               className="w-full h-auto rounded-2xl shadow-lg object-cover mb-8"
               initial={{ opacity: 0, scale: 0.9 }}
